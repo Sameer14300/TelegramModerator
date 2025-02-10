@@ -24,22 +24,24 @@ cd telegram-bio-link-bot
 sudo nano /etc/systemd/system/telegram-bot.service
 ```
 
-Add this content:
-```ini
 [Unit]
 Description=Telegram Bio Link Detection Bot
 After=network.target
 
 [Service]
 Type=simple
-User=your_username
-WorkingDirectory=/path/to/bot
+User=your_username        # Replace with your actual system username
+WorkingDirectory=/home/your_username/telegram-bio-link-bot   # Replace with actual path where you cloned the bot
+Environment="BOT_TOKEN=your_bot_token"                       # Replace with your actual bot token
+Environment="API_ID=your_api_id"                            # Replace with your API ID
+Environment="API_HASH=your_api_hash"                        # Replace with your API hash
+Environment="OWNER_ID=your_owner_id"                        # Replace with your Telegram user ID
+Environment="MONGODB_URI=your_mongodb_uri"                  # Replace with your MongoDB connection string
 ExecStart=/usr/bin/python3 bot.py
 Restart=always
 
 [Install]
 WantedBy=multi-user.target
-```
 
 4. Start bot:
 ```bash
