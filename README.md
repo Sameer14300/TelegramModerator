@@ -30,6 +30,7 @@ After=network.target
 
 [Service]
 Type=simple
+```bash
 User=your_username        # Replace with your actual system username
 WorkingDirectory=/home/your_username/telegram-bio-link-bot   # Replace with actual path where you cloned the bot
 Environment="BOT_TOKEN=your_bot_token"                       # Replace with your actual bot token
