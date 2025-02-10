@@ -17,7 +17,6 @@ sudo apt install python3 python3-pip git -y
 ```bash
 git clone <repository-url>
 cd telegram-bio-link-bot
-pip3 install -r requirements.txt
 ```
 
 3. Create service file:
